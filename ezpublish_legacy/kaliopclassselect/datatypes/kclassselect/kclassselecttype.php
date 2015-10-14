@@ -16,7 +16,17 @@ class KClassSelectType extends eZDataType
 
     function __construct( $value )
     {
-        parent::__construct( self::DATATYPE_STRING, 'KClassSelectType' );
+        $this->eZDataType( self::DATA_TYPE_STRING,
+            ezpI18n::tr( 'kernel/classes/datatypes', 'Class Selector', 'Datatype name' ),
+            array(
+                'serialize_supported' => true,
+                'object_serialize_map' => array(
+                    'data_text' => 'text'
+                )
+            )
+        );
+
+//        parent::__construct( self::DATA_TYPE_STRING, 'KClassSelectType' );
     }
 
     /**
@@ -41,17 +51,23 @@ class KClassSelectType extends eZDataType
 
     function objectAttributeContent($objectAttribute)
     {
-        return json_decode( $objectAttribute->attribute( 'data_text' ) );
+        if ( $objectAttribute->attribute( 'data_text' ) != '' )
+        {
+            return json_decode( $objectAttribute->attribute( 'data_text' ) );
+        }
+
+        return array();
     }
 
 
     function validateObjectAttributeHTTPInput( $http, $base, $contentObjectAttribute )
     {
         $classAttribute = $contentObjectAttribute->contentClassAttribute();
-        if ( $http->hasPostVariable( $base . '_data_classes_' . $contentObjectAttribute->attribute( 'id' ).'[]' ) )
-        {
-            $data = $http->postVariable( $base . '_data_classes_' . $contentObjectAttribute->attribute( 'id' ).'[]' );
+        $postVar = $base . '_data_classes_' . $contentObjectAttribute->attribute( 'id' );
 
+        if ( $http->hasPostVariable( $postVar ) )
+        {
+            $data = $http->postVariable( $postVar );
             if ( empty($data) )
             {
                 if ( !$classAttribute->attribute( 'is_information_collector' ) and
@@ -80,9 +96,9 @@ class KClassSelectType extends eZDataType
      */
     function fetchObjectAttributeHTTPInput( $http, $base, $contentObjectAttribute )
     {
-        if ( $http->hasPostVariable( $base . "_data_classes_" . $contentObjectAttribute->attribute( "id" ).'[]' ) )
+        if ( $http->hasPostVariable( $base . "_data_classes_" . $contentObjectAttribute->attribute( "id" ) ) )
         {
-            $data = $http->postVariable( $base . "_data_classes_" . $contentObjectAttribute->attribute( "id" ).'[]' );
+            $data = $http->postVariable( $base . "_data_classes_" . $contentObjectAttribute->attribute( "id" ) );
             $contentObjectAttribute->setAttribute( "data_text", json_encode( $data ) );
             return true;
         }
@@ -92,9 +108,7 @@ class KClassSelectType extends eZDataType
 
     public function hasObjectAttributeContent( $contentObjectAttribute )
     {
-        return $contentObjectAttribute
-            ->content()
-            ->hasContent();
+        return count($contentObjectAttribute->content()) != 0;
     }
 
     /**
