@@ -1,0 +1,8 @@
+parameters:
+    kaliop.classselectbundle.fieldtype.kclassselect.converter.class: Kaliop\FieldType\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect\LegacyConverter
+
+services:
+    kaliop.classselectbundle.fieldtype.kclassselect.converter:
+        class: %kaliop.classselectbundle.fieldtype.kclassselect.converter.class%
+        tags:
+            - {name: ezpublish.storageEngine.legacy.converter, alias: kclassselect}

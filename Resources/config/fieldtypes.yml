@@ -1,0 +1,9 @@
+parameters:
+    kaliop.classselectbundle.fieldtype.kclassselect.class: Kaliop\FieldType\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect\Type
+
+services:
+    kaliop.classselectbundle.fieldtype.kclassselect:
+        parent: ezpublish.fieldType
+        class: %kaliop.classselectbundle.fieldType.kclassselect.class%
+        tags:
+            - {name: ezpublish.fieldType, alias: kclassselect}

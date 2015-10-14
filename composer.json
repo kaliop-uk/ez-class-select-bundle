@@ -1,0 +1,12 @@
+{
+    "name": "kaliop/class-select-bundle",
+    "description": "eZ Publish bundle providing a class select field type.",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Daniel Clements",
+            "email": "dclements@kaliop.com"
+        }
+    ],
+    "require": {}
+}

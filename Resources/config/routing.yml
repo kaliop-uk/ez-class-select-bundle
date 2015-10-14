@@ -1,0 +1,3 @@
+kaliop_field_type_class_select_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: KaliopFieldTypeClassSelectBundle:Default:index }
