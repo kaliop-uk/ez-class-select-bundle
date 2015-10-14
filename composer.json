@@ -12,7 +12,7 @@
         
     },
     "autoload": {
-        "psr-0": {"Kaliop\\FieldType\\ClassSelectBundle": ""}
+        "psr-4": {"Kaliop\\FieldType\\ClassSelectBundle": ""}
     },
     "target-dir": "Kaliop/ClassSelectBundle",
     "minimum-stability": "dev"
