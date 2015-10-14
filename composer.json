@@ -12,7 +12,7 @@
         
     },
     "autoload": {
-        "psr-4": {"Kaliop\\FieldType\\ClassSelectBundle": ""}
+        "psr-4": {"Kaliop\\FieldType\\ClassSelectBundle\\": ""}
     },
     "minimum-stability": "dev"
 }
