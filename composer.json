@@ -14,6 +14,6 @@
     "autoload": {
         "psr-0": {"Kaliop\\FieldType\\ClassSelectBundle": ""}
     },
-    "target-dir": "Kaliop\ClassSelectBundle",
+    "target-dir": "Kaliop/ClassSelectBundle",
     "minimum-stability": "dev"
 }
