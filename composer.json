@@ -1,5 +1,5 @@
 {
-    "name": "kaliop/class-select-bundle",
+    "name": "kaliop/classselectbundle",
     "description": "eZ Publish bundle providing a class select field type.",
     "license": "GPL",
     "authors": [
@@ -8,5 +8,12 @@
             "email": "dclements@kaliop.com"
         }
     ],
-    "require": {}
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-0": {"Kaliop\\FieldType\\ClassSelectBundle": ""}
+    },
+    "target-dir": "Kaliop",
+    "minimum-stability": "dev"
 }
