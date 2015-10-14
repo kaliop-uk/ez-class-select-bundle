@@ -1,5 +1,5 @@
 parameters:
-    kaliop.classselectbundle.fieldtype.kclassselect.class: Kaliop\FieldType\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect\Type
+    kaliop.classselectbundle.fieldtype.kclassselect.class: Kaliop\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect\Type
 
 services:
     kaliop.classselectbundle.fieldtype.kclassselect:

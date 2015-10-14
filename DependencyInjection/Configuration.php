@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\FieldType\ClassSelectBundle\DependencyInjection;
+namespace Kaliop\ClassSelectBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

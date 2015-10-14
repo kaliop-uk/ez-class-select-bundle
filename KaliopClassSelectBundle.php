@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\FieldType\ClassSelectBundle;
+namespace Kaliop\ClassSelectBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\FieldType\ClassSelectBundle\Tests\Controller;
+namespace Kaliop\ClassSelectBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

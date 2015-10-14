@@ -6,7 +6,7 @@
  * Time: 1:56 PM
  */
 
-namespace Kaliop\FieldType\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect;
+namespace Kaliop\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect;
 
 use eZ\Publish\Core\FieldType\FieldType;
 use eZ\Publish\Core\FieldType\Value as CoreValue;

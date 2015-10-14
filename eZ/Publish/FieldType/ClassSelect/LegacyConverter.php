@@ -6,7 +6,7 @@
  * Time: 3:04 PM
  */
 
-namespace Kaliop\FieldType\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect;
+namespace Kaliop\ClassSelectBundle\eZ\Publish\FieldType\ClassSelect;
 
 use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter;
 use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;

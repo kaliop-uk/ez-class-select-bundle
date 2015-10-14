@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\FieldType\ClassSelectBundle\Controller;
+namespace Kaliop\ClassSelectBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
