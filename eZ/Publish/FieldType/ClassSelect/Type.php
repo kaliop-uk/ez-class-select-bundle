@@ -53,7 +53,7 @@ class Type extends FieldType
         return $value;
     }
 
-    protected function checkValueStructure(Value $value)
+    protected function checkValueStructure(CoreValue $value)
     {
         if ( !is_array( $value->classes ) )
         {
@@ -112,6 +112,6 @@ class Type extends FieldType
             return $this->getEmptyValue();
         }
 
-        return new Value( $fieldValue->data );
+        return new Value( array('classes' => $fieldValue->data) );
     }
 }

@@ -46,6 +46,6 @@ class Value extends BaseValue
      */
     public function __toString()
     {
-        return json_encode( $this->classes );
+        return json_encode( array( 'classes' => $this->classes ) );
     }
 }

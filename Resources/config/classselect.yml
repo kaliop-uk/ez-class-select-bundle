@@ -1,0 +1,14 @@
+# Example structure of settings
+parameters:
+    # Class parameters take precedence over group parameters
+    kaliop_class_select:
+        # include or exclude classes by identifier or id
+        # include classes will be the only classes shown if an entry is made
+        classes:
+            include: []
+            exclude: []
+        # include or exclude class groups by id
+        # include groups will be the only ones shown if an entry is made
+        class_groups:
+            include: []
+            exclude: []
